@@ -1,17 +1,40 @@
-import { Route, Routes } from "react-router";
-import HomePage from "./Pages/HomePage";
-import AboutPage from "./Pages/AboutPage";
-import SkillsPage from "./Pages/SkillsPage";
-import PorfolioPage from "./Pages/PorfolioPage";
+import { useState } from "react";
+import AsideBox from "./components/AsideBox/AsideBox";
+import MainBox from "./components/MainBox/MainBox";
+import WhoPage from "./components/MainBox/MainComponents/Pages/AboutPage/Header/WhoPage";
+import SkillPage from "./components/MainBox/MainComponents/Pages/SkillPage/SkillPage";
+import PortfolioCN from "./components/MainBox/MainComponents/Pages/PortfolioPage/PortfolioCN";
 
 const App = () => {
+  const [page, setPage] = useState("");
+
   return (
-    <Routes>
-      <Route index element={<HomePage />}></Route>
-      <Route path="/about" element={<AboutPage />}></Route>
-      <Route path="/skills" element={<SkillsPage />}></Route>
-      <Route path="/myProjects" element={<PorfolioPage />}></Route>
-    </Routes>
+    <div className="max-w-[1500px] m-auto flex">
+      <aside className="asidePageBox" id="asideBar">
+        <AsideBox setPage={setPage} />
+      </aside>
+
+      {page === "" && (
+        <main className="mainPageBox">
+          <MainBox />{" "}
+        </main>
+      )}
+      {page === "about" && (
+        <main className="mainPageBox">
+          <WhoPage />{" "}
+        </main>
+      )}
+      {page === "skill" && (
+        <main className="mainPageBox">
+          <SkillPage />{" "}
+        </main>
+      )}
+      {page === "portfolio" && (
+        <main className="mainPageBox">
+          <PortfolioCN />{" "}
+        </main>
+      )}
+    </div>
   );
 };
 

@@ -4,24 +4,23 @@ import { IoInformationCircleOutline } from "react-icons/io5";
 import { FaRegFileCode } from "react-icons/fa";
 import { LuBrainCircuit } from "react-icons/lu";
 import { TbFileCv } from "react-icons/tb";
-import { Link } from "react-router-dom";
 
-const AsideNavigation = () => {
+const AsideNavigation = ({ setPage }) => {
   return (
     <div className="asideContentBox">
       <h1 className="asideHeader">Navigation</h1>
-      <Link to="/" className="asideContent">
+      <span onClick={() => setPage("")} className="asideContent">
         <MdOutlineWavingHand /> Hello
-      </Link>
-      <Link to="/about" className="asideContent">
+      </span>
+      <span  onClick={() => setPage("about")} className="asideContent">
         <IoInformationCircleOutline /> Who Am I
-      </Link>
-      <Link to="/skills" className="asideContent">
+      </span>
+      <span  onClick={() => setPage("skill")}  className="asideContent">
         <LuBrainCircuit /> Skills
-      </Link>
-      <Link to="/myProjects" className="asideContent">
+      </span>
+      <span onClick={() => setPage("portfolio")}  className="asideContent">
         <FaRegFileCode /> Portfolio
-      </Link>
+      </span>
       <a
         href="https://flowcv.com/resume/rpgi1sujlv"
         rel="noreferrer"

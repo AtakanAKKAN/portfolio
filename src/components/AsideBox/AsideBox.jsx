@@ -6,11 +6,11 @@ import AsideFollow from "./AsideComponents/AsideFollow";
 import "./Aside.css";
 import AsideContact from "./AsideComponents/AsideContact";
 
-const AsideBox = () => {
+const AsideBox = ({ setPage }) => {
   return (
     <div className="w-full h-full p-6 flex flex-col gap-8">
       <AsideHeader />
-      <AsideNavigation />
+      <AsideNavigation setPage={setPage}  />
       <AsideFollow />
       <AsideContact />
     </div>
