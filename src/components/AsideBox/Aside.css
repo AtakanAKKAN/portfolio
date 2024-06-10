@@ -1,0 +1,11 @@
+.asideContentBox {
+  @apply flex flex-col gap-2;
+}
+
+.asideHeader {
+  @apply text-xs font-light text-gray-700 mb-2;
+}
+
+.asideContent {
+  @apply text-base flex gap-2 items-center hover:translate-x-2 transition-all duration-300 cursor-pointer hover:bg-slate-100 hover:px-2 hover:py-1 rounded-md;
+}
