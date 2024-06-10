@@ -1,0 +1,8 @@
+﻿[build]
+  publish = "build"  # Build işlemi sonucunda oluşturulan dosyaların bulunduğu dizin
+  command = "npm run build"  # Projenizin nasıl build edileceğini belirten komut
+
+[[redirects]]
+  from = "/*"  # Tüm istekler
+  to = "/index.html"  # index.html'e yönlendir
+  status = 200  # HTTP 200: Başarılı yanıt
