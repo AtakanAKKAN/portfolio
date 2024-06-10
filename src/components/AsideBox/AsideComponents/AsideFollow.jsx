@@ -9,7 +9,12 @@ const AsideFollow = () => {
   return (
     <div className="asideContentBox">
       <h1 className="asideHeader">Follow me!</h1>
-      <a href="https://twitter.com/atakan_akkan" className="asideContent group">
+      <a
+        href="https://twitter.com/atakan_akkan"
+        target="_blank"
+        rel="noreferrer"
+        className="asideContent group"
+      >
         <FiTwitter /> Twitter
         <span className="ml-auto text-xl group-hover:text-2xl group-hover:mr-2 transition-all duration-150 ">
           <CiLocationArrow1 />
@@ -17,6 +22,8 @@ const AsideFollow = () => {
       </a>
       <a
         href="https://www.instagram.com/atknkkan/"
+        target="_blank"
+        rel="noreferrer"
         className="asideContent group"
       >
         <SiInstagram /> Instagram
@@ -24,7 +31,12 @@ const AsideFollow = () => {
           <CiLocationArrow1 />
         </span>
       </a>
-      <a href="https://github.com/AtakanAKKAN" className="asideContent group">
+      <a
+        href="https://github.com/AtakanAKKAN"
+        target="_blank"
+        rel="noreferrer"
+        className="asideContent group"
+      >
         <FiGithub /> GitHub
         <span className="ml-auto text-xl group-hover:text-2xl group-hover:mr-2 transition-all duration-150 ">
           <CiLocationArrow1 />
@@ -33,6 +45,8 @@ const AsideFollow = () => {
       <a
         href="https://www.linkedin.com/in/atakanakkan/"
         className="asideContent group"
+        target="_blank"
+        rel="noreferrer"
       >
         <FiLinkedin /> LinkedIn
         <span className="ml-auto text-xl group-hover:text-2xl group-hover:mr-2 transition-all duration-150 ">
