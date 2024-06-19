@@ -5,20 +5,58 @@ import { FaRegFileCode } from "react-icons/fa";
 import { LuBrainCircuit } from "react-icons/lu";
 import { TbFileCv } from "react-icons/tb";
 
-const AsideNavigation = ({ setPage }) => {
+const AsideNavigation = ({ setPage, setIsNavOpen, setIsShadow }) => {
+  console.log(window.innerWidth);
+
   return (
     <div className="asideContentBox">
       <h1 className="asideHeader">Navigation</h1>
-      <span onClick={() => setPage("")} className="asideContent">
+      <span
+        onClick={() => {
+          setPage("");
+          if (window.innerWidth <= 1024) {
+            setIsNavOpen(false);
+            setIsShadow(false);
+          }
+        }}
+        className="asideContent"
+      >
         <MdOutlineWavingHand /> Hello
       </span>
-      <span  onClick={() => setPage("about")} className="asideContent">
+      <span
+        onClick={() => {
+          setPage("about");
+          if (window.innerWidth <= 1024) {
+            setIsNavOpen(false);
+            setIsShadow(false);
+          }
+        }}
+        className="asideContent"
+      >
         <IoInformationCircleOutline /> Who Am I
       </span>
-      <span  onClick={() => setPage("skill")}  className="asideContent">
+      <span
+        onClick={() => {
+          setPage("skill");
+          if (window.innerWidth <= 1024) {
+            setIsNavOpen(false);
+            setIsShadow(false);
+          }
+        }}
+        className="asideContent"
+      >
         <LuBrainCircuit /> Skills
       </span>
-      <span onClick={() => setPage("portfolio")}  className="asideContent">
+      <span
+        onClick={() => {
+          setPage("portfolio");
+          if (window.innerWidth <= 1024) {
+            setIsNavOpen(false);
+            setIsShadow(false);
+          }
+        }}
+        className="asideContent"
+      >
         <FaRegFileCode /> Portfolio
       </span>
       <a

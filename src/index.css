@@ -16,11 +16,15 @@ body {
 }
 
 .mainPageBox {
-  @apply w-10/12 max-h-screen h-full overflow-auto;
+  @apply w-10/12 max-h-screen h-full overflow-auto max-lg:w-full;
 }
 
 .asidePageBox {
-  @apply w-2/12 bg-[#fafafa] border max-h-screen h-full overflow-auto;
+  @apply w-2/12 bg-[#fafafa] border max-h-screen h-full overflow-auto max-lg:hidden;
+}
+
+.mainPageBox::-webkit-scrollbar {
+  display: none;
 }
 
 .info {
