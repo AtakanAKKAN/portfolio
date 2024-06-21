@@ -30,7 +30,7 @@ const WhoPage = () => {
           duration: 0.5,
         }}
       >
-        <h1 className="text-5xl font-extrabold mb-10">who am I.</h1>
+        <h1 className="text-5xl font-extrabold mb-10 max-lg:text-center  ">who am I.</h1>
         <span className="leading-relaxed">
           Hello Traveler! My name is Atakan. I landed on Earth in 2000. I'm fun,
           playful, and love talking to people. I thrive on change and

@@ -8,7 +8,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 const App = () => {
   const [page, setPage] = useState("");
-  const [isNavOpen, setIsNavOpen] = useState(true);
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const [isShadow, setIsShadow] = useState(false);
 
   useEffect(() => {
@@ -20,6 +20,10 @@ const App = () => {
       }
     };
 
+    // Initial check
+    handleResize();
+
+    // Add event listener
     window.addEventListener("resize", handleResize);
 
     // Cleanup event listener on component unmount
@@ -28,11 +32,13 @@ const App = () => {
     };
   }, []);
 
+  console.log(isNavOpen);
+
   return (
     <div className="max-w-[1500px] m-auto flex max-lg:flex-col">
-      <div className="w-full flex fixed top-0 left-0 justify-end text-4xl bg-teal-400 lg:hidden">
+      <div className="w-full bg-[#fafafa]  fixed top-0 left-0 text-4xl  p-2 lg:hidden opacity-95 z-10">
         <span
-          className="p-6 "
+          className="p-4 bg-[#9E9C9C] w-full flex justify-end rounded-md"
           onClick={() => {
             setIsNavOpen(true);
             setIsShadow(true);

@@ -29,7 +29,7 @@ const SkillPage = () => {
       }}
       className="w-full h-full p-6 flex flex-col gap-10 mt-16 mb-20"
     >
-      <h1 className="text-5xl font-extrabold mb-10">My Skills.</h1>
+      <h1 className="text-5xl font-extrabold mb-10 max-lg:text-center">My Skills.</h1>
       <motion.div
         initial={{
           y: 35,

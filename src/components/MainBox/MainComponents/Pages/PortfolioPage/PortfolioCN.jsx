@@ -21,16 +21,21 @@ const PortfolioCN = () => {
       }}
       className="w-full h-full p-6 flex flex-col gap-10 mt-16 mb-20"
     >
-      <h1 className="text-5xl font-extrabold mb-10">projects.</h1>
+      <h1 className="text-5xl font-extrabold mb-10 max-lg:text-center">
+        projects.
+      </h1>
 
-      <div className="border border-[#a1a1a1] flex gap-4 bg-[#fafafa] rounded-md p-2 w-11/12">
-        <video className="w-5/12" controls>
+      <div className="border border-[#a1a1a1] flex gap-4 bg-[#fafafa] rounded-md p-2 w-11/12 max-lg:flex-col max-lg:w-full shadow">
+        <video
+          className="w-5/12 flex justify-center items-center max-lg:w-full"
+          controls
+        >
           <source src={video} type="video/mp4" className="w-full h-full" />
         </video>
-        <div className="w-7/12 flex flex-col gap-8 justify-center p-4">
+        <div className="w-7/12 max-lg:w-full flex flex-col gap-8 justify-center p-4 max-lg:gap-2">
           <h1 className="font-bold text-3xl">Social Media App</h1>
 
-          <div className="flex justify-between">
+          <div className="flex justify-between items-center">
             <span className="text-sm text-gray-600">
               A social media application where people can share, like and save
               pictures.{" "}
@@ -43,14 +48,14 @@ const PortfolioCN = () => {
         </div>
       </div>
 
-      <div className="border border-[#a1a1a1] flex gap-4 bg-[#fafafa] rounded-md p-3 w-11/12">
-        <div className="w-5/12 flex justify-center items-center">
+      <div className="border border-[#a1a1a1] flex gap-4 bg-[#fafafa] rounded-md p-2 w-11/12 max-lg:flex-col max-lg:w-full shadow">
+        <div className="w-5/12 max-lg:w-full flex justify-center items-center">
           <Image src={pos} alt="" className="object-cover" />
         </div>
-        <div className="w-7/12 flex flex-col gap-8 justify-center p-4">
+        <div className="w-7/12 max-lg:w-full flex flex-col gap-8 max-lg:gap-2 justify-center p-4">
           <h1 className="font-bold text-3xl">POS Application</h1>
 
-          <div className="flex justify-between">
+          <div className="flex justify-between items-center">
             <span className="text-sm text-gray-600">
               Application for restaurants to organise their products, customer
               and invoice tracking
@@ -66,13 +71,13 @@ const PortfolioCN = () => {
         </div>
       </div>
 
-      <div className="border border-[#a1a1a1] flex gap-4 bg-[#fafafa] rounded-md p-3 w-11/12">
-        <div className="w-5/12 flex justify-center items-center">
+      <div className="border border-[#a1a1a1] flex gap-4 bg-[#fafafa] rounded-md p-2 w-11/12 max-lg:flex-col max-lg:w-full shadow">
+        <div className="w-5/12 max-lg:w-full flex justify-center items-center">
           <Image src={coffe} alt="" className="object-cover" />
         </div>
-        <div className="w-7/12  flex flex-col gap-8 justify-center p-4">
+        <div className="w-7/12 max-lg:w-full flex flex-col gap-8 max-lg:gap-2 justify-center p-4">
           <h1 className="font-bold text-3xl">Coffe Shop</h1>
-          <div className="flex justify-between">
+          <div className="flex justify-between items-center">
             <span className="text-sm text-gray-600">
               Application prepared for company and product promotion
             </span>
