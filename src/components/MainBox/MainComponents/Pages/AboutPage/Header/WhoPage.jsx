@@ -30,7 +30,9 @@ const WhoPage = () => {
           duration: 0.5,
         }}
       >
-        <h1 className="text-5xl font-extrabold mb-10 max-lg:text-center  ">who am I.</h1>
+        <h1 className="text-5xl font-extrabold mb-10 max-lg:text-center  ">
+          who am I.
+        </h1>
         <span className="leading-relaxed">
           Hello Traveler! My name is Atakan. I landed on Earth in 2000. I'm fun,
           playful, and love talking to people. I thrive on change and
@@ -41,7 +43,7 @@ const WhoPage = () => {
       </motion.div>
 
       <motion.div
-        initial={{      
+        initial={{
           opacity: 0,
         }}
         animate={{
@@ -63,6 +65,8 @@ const WhoPage = () => {
           tried archery, but it remained a hobby. Here is my{" "}
           <a
             className="underline font-semibold italic"
+            target="_blank"
+            rel="noreferrer"
             href="https://open.spotify.com/user/21u4rlglpzoii2l6d2inhu3sq?si=1714f03315bd4d92"
           >
             Spotify account
@@ -77,6 +81,8 @@ const WhoPage = () => {
           some competition. Single-player games are fun, but they can't replace
           the enjoyment of playing with friends. Here is my{" "}
           <a
+            target="_blank"
+            rel="noreferrer"
             className="underline font-semibold italic"
             href="https://steamcommunity.com/profiles/76561198178391629/"
           >

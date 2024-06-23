@@ -61,7 +61,9 @@ const PortfolioCN = () => {
               and invoice tracking
             </span>
             <a
-              href="https://atakanakkan.github.io/coffeShop/"
+              href="https://atakanakkan-pos-application.onrender.com"
+              target="_blank"
+              rel="noreferrer"
               className="flex gap-1 items-center border border-teal-600 rounded-full w-fit p-2 hover:text-teal-600 hover:bg-[#f8f8ff] transition-all duration-300 cursor-pointer ml-auto"
             >
               <IoMdLink />
@@ -82,6 +84,8 @@ const PortfolioCN = () => {
               Application prepared for company and product promotion
             </span>
             <a
+              target="_blank"
+              rel="noreferrer"
               href="https://atakanakkan.github.io/coffeShop/"
               className="flex gap-1 items-center border border-teal-600 rounded-full w-fit p-2 hover:text-teal-600 hover:bg-[#f8f8ff] transition-all duration-300 cursor-pointer ml-auto"
             >
