@@ -34,7 +34,7 @@ const WhoPage = () => {
           who am I.
         </h1>
         <span className="leading-relaxed">
-          Hello Traveler! My name is Atakan. I landed on Earth in 2000. I'm fun,
+          Hello Traveler! My name is Atakan. I am 24. I'm fun,
           playful, and love talking to people. I thrive on change and
           self-improvement. Currently, I'm into web design and spending time
           with my cat and friends. Keep scrolling to learn more about me.

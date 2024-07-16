@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 import { IoLogoCss3, IoLogoJavascript } from "react-icons/io";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiAntdesign } from "react-icons/si";
+import { SiAntdesign, SiNextdotjs, SiOpenai } from "react-icons/si";
 import { BsFillLightningChargeFill } from "react-icons/bs";
 import { BiLogoMongodb } from "react-icons/bi";
 import { GiStack } from "react-icons/gi";
@@ -29,7 +29,9 @@ const SkillPage = () => {
       }}
       className="w-full h-full p-6 flex flex-col gap-10 mt-16 mb-20"
     >
-      <h1 className="text-5xl font-extrabold mb-10 max-lg:text-center">My Skills.</h1>
+      <h1 className="text-5xl font-extrabold mb-10 max-lg:text-center">
+        My Skills.
+      </h1>
       <motion.div
         initial={{
           y: 35,
@@ -56,6 +58,8 @@ const SkillPage = () => {
         <SkillLayout name={"Mongodb"} icon={<BiLogoMongodb />} />
         <SkillLayout name={"Git"} icon={<FaGitAlt />} />
         <SkillLayout name={"MERN Stack"} icon={<GiStack />} />
+        <SkillLayout name={"Next.js"} icon={<SiNextdotjs />} />
+        <SkillLayout name={"ChatGbt"} icon={<SiOpenai />} />
       </motion.div>
     </motion.div>
   );
