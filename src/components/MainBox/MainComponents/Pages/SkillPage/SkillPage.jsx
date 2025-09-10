@@ -15,53 +15,60 @@ import { BiLogoMongodb } from "react-icons/bi";
 import { GiStack } from "react-icons/gi";
 import { motion } from "framer-motion";
 
+const skills = [
+  { name: "HTML", icon: <FaHtml5 /> },
+  { name: "CSS", icon: <IoLogoCss3 /> },
+  { name: "JavaScript", icon: <IoLogoJavascript /> },
+  { name: "Bootstrap", icon: <FaBootstrap /> },
+  { name: "React", icon: <FaReact /> },
+  { name: "Tailwind CSS", icon: <RiTailwindCssFill /> },
+  { name: "Ant Design", icon: <SiAntdesign /> },
+  { name: "Express.js", icon: <BsFillLightningChargeFill /> },
+  { name: "Node.js", icon: <FaNodeJs /> },
+  { name: "MongoDB", icon: <BiLogoMongodb /> },
+  { name: "Git", icon: <FaGitAlt /> },
+  { name: "MERN Stack", icon: <GiStack /> },
+  { name: "Next.js", icon: <SiNextdotjs /> },
+  { name: "ChatGPT", icon: <SiOpenai /> },
+];
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+};
+
 const SkillPage = () => {
   return (
-    <motion.div
-      initial={{
-        y: 35,
-      }}
-      animate={{
-        y: 0,
-      }}
-      transition={{
-        duration: 0.5,
-      }}
-      className="w-full h-full p-6 flex flex-col gap-10 mt-16 mb-20"
+    <motion.section
+      className="w-full h-full p-6 flex flex-col gap-10 pt-20 pb-24"
+      initial="hidden"
+      animate="show"
+      variants={container}
+      aria-label="Skills section"
     >
-      <h1 className="text-5xl font-extrabold mb-10 max-lg:text-center">
-        My Skills.
+      <h1 className="text-5xl font-extrabold mb-6 max-lg:text-center">
+        My Skills
       </h1>
-      <motion.div
-        initial={{
-          y: 35,
-          opacity: 0,
-        }}
-        animate={{
-          y: 0,
-          opacity: 1,
-        }}
-        transition={{
-          duration: 1,
-        }}
-        className="flex flex-wrap gap-3 w-12/12 m-auto"
+
+      <motion.ul
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"
+        variants={container}
       >
-        <SkillLayout name={"HTML"} icon={<FaHtml5 />} />
-        <SkillLayout name={"CSS"} icon={<IoLogoCss3 />} />
-        <SkillLayout name={"JavaScript"} icon={<IoLogoJavascript />} />
-        <SkillLayout name={"Bootstrap"} icon={<FaBootstrap />} />
-        <SkillLayout name={"React"} icon={<FaReact />} />
-        <SkillLayout name={"Tailwind CSS"} icon={<RiTailwindCssFill />} />
-        <SkillLayout name={"AntDesign"} icon={<SiAntdesign />} />
-        <SkillLayout name={"Express.js"} icon={<BsFillLightningChargeFill />} />
-        <SkillLayout name={"Node.js"} icon={<FaNodeJs />} />
-        <SkillLayout name={"Mongodb"} icon={<BiLogoMongodb />} />
-        <SkillLayout name={"Git"} icon={<FaGitAlt />} />
-        <SkillLayout name={"MERN Stack"} icon={<GiStack />} />
-        <SkillLayout name={"Next.js"} icon={<SiNextdotjs />} />
-        <SkillLayout name={"ChatGbt"} icon={<SiOpenai />} />
-      </motion.div>
-    </motion.div>
+        {skills.map((skill) => (
+          <motion.li key={skill.name} variants={item}>
+            <SkillLayout name={skill.name} icon={skill.icon} />
+          </motion.li>
+        ))}
+      </motion.ul>
+    </motion.section>
   );
 };
 

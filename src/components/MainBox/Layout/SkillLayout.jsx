@@ -2,9 +2,25 @@ import React from "react";
 
 const SkillLayout = ({ name, icon }) => {
   return (
-    <div className="border border-slate-800 shadow hover:shadow-lg rounded py-4 px-8 flex gap-2 justify-center items-center max-lg:py-2 max-lg:px-4 cursor-pointer hover:scale-125 hover:mx-3 transition-all duration-300 hover:rounded-2xl ">
-      {icon}
-      {name}
+    <div
+      className="
+        flex items-center justify-center gap-2
+        px-6 py-3
+        max-lg:px-4 max-lg:py-2
+        border border-slate-300
+        rounded-xl
+        bg-white
+        text-gray-800 font-medium
+        shadow-sm hover:shadow-md
+        transition-transform duration-300
+        hover:scale-105
+        cursor-pointer
+      "
+      role="listitem"
+      aria-label={name}
+    >
+      <span className="text-2xl text-slate-700">{icon}</span>
+      <span className="text-sm sm:text-base">{name}</span>
     </div>
   );
 };

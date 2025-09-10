@@ -15,17 +15,6 @@ body {
   @apply transition-all duration-300;
 }
 
-.mainPageBox {
-  @apply w-10/12 max-h-screen h-full overflow-auto max-lg:w-full;
-}
-
-.asidePageBox {
-  @apply w-2/12 bg-[#fafafa] border max-h-screen h-full overflow-auto max-lg:hidden;
-}
-
-.mainPageBox::-webkit-scrollbar {
-  display: none;
-}
 
 .info {
   font-family: "Tiny5", sans-serif;
@@ -40,34 +29,3 @@ body {
   font-family: "Dancing Script", cursive;
 }
 
-.hover-effect {
-  background-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    transparent 90%,
-    #011222 90%,
-    #011222 100%
-  );
-  background-repeat: no-repeat;
-  background-size: 0 100%;
-  background-position-x: right;
-  transition: background-size 300ms;
-}
-
-.hover-effect:hover {
-  background-size: 100% 100%;
-  background-position-x: left;
-}
-
-.navbar.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #f8f8ff;
-  z-index: 10;
-  @apply p-2 shadow-md;
-}
-
-#asideBar::-webkit-scrollbar {
-  display: none;
-}
